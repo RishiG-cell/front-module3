@@ -1,9 +1,9 @@
 import Signupform from "../components/Signupform";
 
-const SignUpPage = () => {
+const SignUpPage = ({ API_URL }) => {
   return (
     <>
-      <Signupform />
+      <Signupform API_URL={API_URL} />
     </>
   );
 };

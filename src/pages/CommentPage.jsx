@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
-const CommentPage = () => {
+const CommentPage = ({ API_URL }) => {
   const { currentUser } = useContext(AuthContext);
   const [comment, SetComment] = useState("");
   const nav = useNavigate();

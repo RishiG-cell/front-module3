@@ -5,7 +5,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
-const UpdateUserPage = () => {
+const UpdateUserPage = ({ API_URL }) => {
   const { currentUser } = useContext(AuthContext);
   const [profileUser, setProfileUser] = useState(null);
   const [username, SetUsername] = useState("");

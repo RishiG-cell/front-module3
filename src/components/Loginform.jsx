@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-const Loginform = () => {
+const Loginform = ({ API_URL }) => {
   const [username, SetUsername] = useState("");
   const [password, SetPassword] = useState("");
   const { authenticateUser } = useContext(AuthContext);

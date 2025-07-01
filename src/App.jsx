@@ -14,6 +14,7 @@ import CreatePostPage from "./pages/CreatePostPage";
 import CommentPage from "./pages/CommentPage";
 import PostProfielPage from "./pages/PostProfielPage";
 import ProtectedRouterhome from "./components/ProtectedRouterhome";
+import { API_URL } from "./config/config";
 
 function App() {
   return (
@@ -25,17 +26,17 @@ function App() {
           path="/"
           element={
             <ProtectedRouterhome>
-              <HomePage />
+              <HomePage API_URL={API_URL} />
             </ProtectedRouterhome>
           }
         />
-        <Route path="/auth/login" element={<LoginPage />} />
-        <Route path="/auth/signup" element={<SignUpPage />} />
+        <Route path="/auth/login" element={<LoginPage API_URL={API_URL} />} />
+        <Route path="/auth/signup" element={<SignUpPage API_URL={API_URL} />} />
         <Route
           path="/profile"
           element={
             <ProtectedRouter>
-              <ProfilePage />
+              <ProfilePage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />
@@ -43,7 +44,7 @@ function App() {
           path="/feed"
           element={
             <ProtectedRouter>
-              <FeedPage />
+              <FeedPage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />
@@ -51,7 +52,7 @@ function App() {
           path="/update"
           element={
             <ProtectedRouter>
-              <UpdateUserPage />
+              <UpdateUserPage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />
@@ -59,7 +60,7 @@ function App() {
           path="/post"
           element={
             <ProtectedRouter>
-              <CreatePostPage />
+              <CreatePostPage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />
@@ -68,7 +69,7 @@ function App() {
           path="/comment/:postId"
           element={
             <ProtectedRouter>
-              <CommentPage />
+              <CommentPage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />
@@ -76,7 +77,7 @@ function App() {
           path="/post-profile/:userId"
           element={
             <ProtectedRouter>
-              <PostProfielPage />
+              <PostProfielPage API_URL={API_URL} />
             </ProtectedRouter>
           }
         />

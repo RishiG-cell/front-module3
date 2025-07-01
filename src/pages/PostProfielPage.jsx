@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-const PostProfielPage = () => {
+const PostProfielPage = ({ API_URL }) => {
   const { userId } = useParams();
   const [profileFeed, setProfileFeed] = useState({});
 

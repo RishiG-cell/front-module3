@@ -2,6 +2,7 @@ import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config/config";
 
 const NewPost = ({ posts, setPosts }) => {
   const { currentUser } = useContext(AuthContext);

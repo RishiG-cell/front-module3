@@ -5,7 +5,7 @@ import NewPost from "../components/NewPost";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-const FeedPage = () => {
+const FeedPage = ({ API_URL }) => {
   const { currentUser } = useContext(AuthContext);
   const [posts, setPosts] = useState([]);
   const nav = useNavigate();

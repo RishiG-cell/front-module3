@@ -1,11 +1,11 @@
 import { useState } from "react";
 import NewPost from "../components/NewPost";
 
-const CreatePostPage = () => {
+const CreatePostPage = ({ API_URL }) => {
   const [posts, setPosts] = useState([]);
   return (
     <div>
-      <NewPost posts={posts} setPosts={setPosts} />
+      <NewPost posts={posts} setPosts={setPosts} API_URL={API_URL} />
     </div>
   );
 };
