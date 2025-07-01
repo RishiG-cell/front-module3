@@ -51,8 +51,8 @@ const UpdateUserPage = () => {
   return (
     <div className="profilepage">
       <Sidebar />
-      <div>
-        <h1>Signup</h1>
+      <div className="updatePage">
+        <h1>Update</h1>
         <form className="signupform" onSubmit={handleUpdate}>
           <label>
             Username:

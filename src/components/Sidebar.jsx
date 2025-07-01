@@ -5,6 +5,8 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Link to="/feed">Feed</Link>
+      <Link to="/post">Post</Link>
+      <Link to="/update">Update profile</Link>
     </div>
   );
 };

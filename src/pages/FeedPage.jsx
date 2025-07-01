@@ -13,7 +13,6 @@ const FeedPage = () => {
     axios
       .get("http://localhost:5005/post/feed")
       .then((res) => {
-        console.log(res.data);
         setPosts(res.data);
       })
       .catch((err) => console.log(err));
@@ -51,7 +50,9 @@ const FeedPage = () => {
         {posts.map((onePost) => {
           return (
             <div className="feed-card" key={onePost._id}>
-              <h3>{onePost.user.username}</h3>
+              <Link to={`/post-profile/${onePost.user._id}`}>
+                <h3>{onePost.user.username}</h3>
+              </Link>
               <img src={onePost.image} />
               <div>
                 <h3>{onePost.post}</h3>

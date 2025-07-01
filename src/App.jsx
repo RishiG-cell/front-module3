@@ -12,6 +12,8 @@ import FeedPage from "./pages/FeedPage";
 import UpdateUserPage from "./pages/UpdateUserPage";
 import CreatePostPage from "./pages/CreatePostPage";
 import CommentPage from "./pages/CommentPage";
+import PostProfielPage from "./pages/PostProfielPage";
+import ProtectedRouterhome from "./components/ProtectedRouterhome";
 
 function App() {
   return (
@@ -19,7 +21,14 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRouterhome>
+              <HomePage />
+            </ProtectedRouterhome>
+          }
+        />
         <Route path="/auth/login" element={<LoginPage />} />
         <Route path="/auth/signup" element={<SignUpPage />} />
         <Route
@@ -60,6 +69,14 @@ function App() {
           element={
             <ProtectedRouter>
               <CommentPage />
+            </ProtectedRouter>
+          }
+        />
+        <Route
+          path="/post-profile/:userId"
+          element={
+            <ProtectedRouter>
+              <PostProfielPage />
             </ProtectedRouter>
           }
         />

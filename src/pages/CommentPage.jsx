@@ -30,7 +30,6 @@ const CommentPage = () => {
         postId,
       })
       .then((res) => {
-        console.log(res.data);
         nav("/feed");
       })
       .catch((err) => {
@@ -42,7 +41,6 @@ const CommentPage = () => {
     axios
       .get(`http://localhost:5005/comment/onepost/${postId}`)
       .then((res) => {
-        console.log(res.data);
         setOldComments(res.data.comments);
       })
       .catch((err) => {

@@ -2,7 +2,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(228, 251, 247);
+  background: radial-gradient(
+    circle at bottom,
+    rgba(128, 128, 128, 0.747) 5%,
+    rgba(0, 208, 255, 0.275) 40%,
+    white
+  );
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -20,6 +28,11 @@ nav {
   margin-bottom: 10px;
   padding: 5px;
   background-color: rgba(0, 208, 255, 0.275);
+}
+
+nav a:hover {
+  font-size: 30px;
+  color: yellowgreen;
 }
 
 nav img {
@@ -114,6 +127,17 @@ nav img {
   align-self: flex-start;
   background-color: rgba(0, 208, 255, 0.275);
 }
+
+.sidebar a {
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+}
+
+.sidebar a:hover {
+  color: yellowgreen;
+}
+
 .feed-container {
   padding: 40px;
   margin: 20px 100px;
