@@ -11,10 +11,10 @@ const ProfilePage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/profile/user/${currentUser._id}`)
+      .get(`${API_URL}/profile/user/${currentUser._id}`)
       .then((res) => {
         setProfileUser(res.data);
-        return axios.get(`http://localhost:5005/post/feed/${currentUser._id}`);
+        return axios.get(`${API_URL}/post/feed/${currentUser._id}`);
       })
       .then((res) => {
         setUserPost(res.data);

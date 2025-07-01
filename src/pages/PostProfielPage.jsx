@@ -9,7 +9,7 @@ const PostProfielPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/profile/user/${userId}`)
+      .get(`${API_URL}/profile/user/${userId}`)
       .then((res) => {
         setProfileFeed(res.data);
       })

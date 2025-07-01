@@ -24,7 +24,7 @@ const CommentPage = () => {
     // }
 
     axios
-      .post("http://localhost:5005/comment/create", {
+      .post(`${API_URL}/comment/create`, {
         comment,
         user: currentUser._id,
         postId,
@@ -39,7 +39,7 @@ const CommentPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/comment/onepost/${postId}`)
+      .get(`${API_URL}/comment/onepost/${postId}`)
       .then((res) => {
         setOldComments(res.data.comments);
       })

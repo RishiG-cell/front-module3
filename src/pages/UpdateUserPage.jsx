@@ -17,7 +17,7 @@ const UpdateUserPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/profile/user/${currentUser._id}`)
+      .get(`${API_URL}/profile/user/${currentUser._id}`)
       .then((res) => {
         setProfileUser(res.data);
         SetUsername(res.data.username);
@@ -40,7 +40,7 @@ const UpdateUserPage = () => {
     formData.append("country", country);
     formData.append("imageUrl", image);
     axios
-      .put(`http://localhost:5005/profile/update/${currentUser._id}`, formData)
+      .put(`${API_URL}/profile/update/${currentUser._id}`, formData)
       .then((res) => {
         console.log(res);
         nav("/profile");

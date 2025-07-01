@@ -11,7 +11,7 @@ const FeedPage = () => {
   const nav = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:5005/post/feed")
+      .get(`${API_URL}/post/feed`)
       .then((res) => {
         setPosts(res.data);
       })
@@ -20,7 +20,7 @@ const FeedPage = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5005/post/delete/${id}`)
+      .delete(`${API_URL}/post/delete/${id}`)
       .then((res) => {
         nav("/profile");
       })
@@ -29,7 +29,7 @@ const FeedPage = () => {
 
   const handleLike = (id) => {
     axios
-      .post(`http://localhost:5005/post/liked/${id}`)
+      .post(`${API_URL}/post/liked/${id}`)
       .then((res) => {
         const updatedPosts = posts.map((onePost) => {
           if (onePost._id === id) {

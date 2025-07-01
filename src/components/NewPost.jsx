@@ -18,10 +18,7 @@ const NewPost = ({ posts, setPosts }) => {
 
     try {
       const newPost = { user: currentUser._id, post };
-      const postUser = await axios.post(
-        "http://localhost:5005/post/create",
-        formData
-      );
+      const postUser = await axios.post(`${API_URL}/post/create`, formData);
       setPosts([postUser.data, ...posts]);
       setPost("");
       nav("/feed");

@@ -22,7 +22,7 @@ const Signupform = () => {
     formData.append("password", password);
 
     axios
-      .post("http://localhost:5005/auth/signup", formData)
+      .post(`${API_URL}/auth/signup`, formData)
       .then((res) => {
         console.log("succesful", res.data);
         nav("/auth/login");

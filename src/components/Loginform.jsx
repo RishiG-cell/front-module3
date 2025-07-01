@@ -13,10 +13,7 @@ const Loginform = () => {
     e.preventDefault();
     const loginUser = { username, password };
     try {
-      const res = await axios.post(
-        "http://localhost:5005/auth/login",
-        loginUser
-      );
+      const res = await axios.post(`${API_URL}/auth/login`, loginUser);
       localStorage.setItem("authToken", res.data.authToken);
       await authenticateUser();
       nav("/profile");
