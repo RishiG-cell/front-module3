@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_URL } from "../config/config";
 
-const Loginform = ({ API_URL }) => {
+const Loginform = () => {
   const [username, SetUsername] = useState("");
   const [password, SetPassword] = useState("");
   const { authenticateUser } = useContext(AuthContext);

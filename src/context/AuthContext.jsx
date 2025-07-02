@@ -24,7 +24,7 @@ const AuthContextWrapper = ({ children }) => {
       setIsLoading(false);
       SetLoggedIn(true);
     } catch (error) {
-      console.error(error.response.data.errorMessage);
+      console.log(error);
       setCurrentUser(null);
       setIsLoading(false);
       SetLoggedIn(false);

@@ -3,8 +3,9 @@ import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import { API_URL } from "../config/config";
 
-const ProfilePage = ({ API_URL }) => {
+const ProfilePage = () => {
   const { currentUser, isLoading, loggedIn } = useContext(AuthContext);
   const [profileUser, setProfileUser] = useState(null);
   const [userPost, setUserPost] = useState([]);

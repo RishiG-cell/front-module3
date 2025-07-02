@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { API_URL } from "../config/config";
 
-const PostProfielPage = ({ API_URL }) => {
+const PostProfielPage = () => {
   const { userId } = useParams();
   const [profileFeed, setProfileFeed] = useState({});
 

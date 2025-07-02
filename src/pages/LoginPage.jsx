@@ -1,9 +1,9 @@
 import Loginform from "../components/Loginform";
 
-const LoginPage = ({ API_URL }) => {
+const LoginPage = () => {
   return (
     <>
-      <Loginform API_URL={API_URL} />
+      <Loginform />
     </>
   );
 };

@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
+import { API_URL } from "../config/config";
 
 import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
-const UpdateUserPage = ({ API_URL }) => {
+const UpdateUserPage = () => {
   const { currentUser } = useContext(AuthContext);
   const [profileUser, setProfileUser] = useState(null);
   const [username, SetUsername] = useState("");

@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { API_URL } from "../config/config";
 
-const CommentPage = ({ API_URL }) => {
+const CommentPage = () => {
   const { currentUser } = useContext(AuthContext);
   const [comment, SetComment] = useState("");
   const nav = useNavigate();
