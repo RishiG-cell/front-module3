@@ -7,16 +7,19 @@ import { Spotify } from "react-spotify-embed";
 
 const PostProfielPage = () => {
   const { userId } = useParams();
-  const [profileFeed, setProfileFeed] = useState({});
+  const [profileFeed, setProfileFeed] = useState(null);
   useEffect(() => {
     axios
       .get(`${API_URL}/profile/user/${userId}`)
       .then((res) => {
         setProfileFeed(res.data);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
-
+  if (!profileFeed) {
+    return <div className="loader"></div>;
+  }
   return (
     <div className="info-page">
       <h1>{profileFeed.username}'s ProfilePage</h1>

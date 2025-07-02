@@ -76,7 +76,7 @@ const ProfilePage = () => {
         <Link to="/update">Update profile</Link>
       </div>
       <div className="spotify-link-box">
-        <Spotify link={`${SpotifyLink}`} />
+        <Spotify className="box" link={`${SpotifyLink}`} />
         <form onSubmit={handleSpotify} className="spotifylink">
           <label>
             Paste in your Spotify favorite list here !
