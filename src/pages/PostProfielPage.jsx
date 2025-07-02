@@ -13,7 +13,6 @@ const PostProfielPage = () => {
       .get(`${API_URL}/profile/user/${userId}`)
       .then((res) => {
         setProfileFeed(res.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, []);

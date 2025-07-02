@@ -17,7 +17,6 @@ const ProfilePage = () => {
     axios
       .get(`${API_URL}/profile/user/${currentUser._id}`)
       .then((res) => {
-        console.log(res.data);
         setProfileUser(res.data);
         setSpotifyLink(res.data.spotify);
         return axios.get(`${API_URL}/post/feed/${currentUser._id}`);
