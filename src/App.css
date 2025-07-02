@@ -139,12 +139,14 @@ nav img {
 }
 
 .feed-container {
-  padding: 40px;
-  margin: 20px 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 50vw;
+  height: 100vh;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
 }
 .feed-card {
   display: flex;
@@ -181,7 +183,7 @@ nav img {
   margin: 10px;
   background-color: rgba(0, 208, 255, 0.275);
   box-shadow: 10px 10px 10px rgb(203, 203, 203);
-  height: 100vh;
+  height: 100%;
 }
 
 .feed-post button {
@@ -303,4 +305,26 @@ button {
   background-color: rgba(0, 0, 255, 0.682);
   font-weight: 800;
   color: white;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+textarea {
+  resize: none;
 }
