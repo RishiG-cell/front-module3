@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const ProtectedRouter = ({ children }) => {
   const { isLoading, loggedIn } = useContext(AuthContext);
   if (isLoading) {
-    return <div class="loader"></div>;
+    return <div className="loader"></div>;
   }
   if (!loggedIn) {
     return <Navigate to="/auth/login" />;

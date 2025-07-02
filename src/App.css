@@ -23,16 +23,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 2px 2px 2px 2px rgb(196, 196, 196);
+
   border-radius: 20px;
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: rgba(0, 208, 255, 0.275);
 }
 
 nav a:hover {
   font-size: 30px;
-  color: yellowgreen;
+  color: rgb(161, 224, 33);
 }
 
 nav img {
@@ -232,6 +229,15 @@ input {
   width: 100%;
 }
 
+.info-spot {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: -5px 5px 5px 5px rgb(196, 196, 196);
+  width: 40%;
+  border-radius: 20px;
+}
+
 .info-page img {
   width: 25vw;
   height: 50vh;
@@ -327,4 +333,47 @@ button {
 
 textarea {
   resize: none;
+}
+
+.container .pattern {
+  background: linear-gradient(45deg, #92b9ba 45px, transparent 45px) 64px 64px,
+    linear-gradient(
+      45deg,
+      #92b5ba 45px,
+      transparent 45px,
+      transparent 91px,
+      #e1ebbd 91px,
+      #bdebe4 135px,
+      transparent 135px
+    ),
+    linear-gradient(
+      45deg,
+      #929aba 23px,
+      transparent 23px,
+      transparent 68px,
+      #92a2ba 68px,
+      #9298ba 113px,
+      transparent 113px,
+      transparent 158px,
+      #929dba 158px
+    );
+  background-color: #e1ebbd;
+  background-size: 128px 128px;
+}
+
+.spotifylink {
+  text-align: center;
+}
+
+.spotifylink input {
+  width: 80%;
+}
+
+.spotify-link-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  box-shadow: -5px 5px 5px 5px rgb(196, 196, 196);
 }

@@ -8,13 +8,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
-        <Link to="/">
-          <img src={logo} alt="logo" />
-        </Link>
-        {currentUser && <Link to="/profile">Profile</Link>}
-        {currentUser && <button onClick={handleLogout}>Loggout</button>}
-      </nav>
+      <div className="container">
+        <div className="pattern">
+          <nav>
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
+            {currentUser && <Link to="/profile">Profile</Link>}
+            {currentUser && <button onClick={handleLogout}>Loggout</button>}
+          </nav>
+        </div>
+      </div>
     </>
   );
 };
