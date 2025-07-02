@@ -3,11 +3,13 @@ import { AuthContext } from "../context/AuthContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../config/config";
+import { ToastContainer, toast } from "react-toastify";
 
 const NewPost = ({ posts, setPosts }) => {
   const { currentUser } = useContext(AuthContext);
   const [post, setPost] = useState("");
   const nav = useNavigate();
+  const wave = () => toast("Posted!");
 
   async function handlePost(e) {
     e.preventDefault();
@@ -44,8 +46,9 @@ const NewPost = ({ posts, setPosts }) => {
           Image:
           <input type="file" name="image" />
         </label>
-        <button>Post</button>
+        <button onClick={wave}>Post</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

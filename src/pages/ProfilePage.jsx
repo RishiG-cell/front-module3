@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import { API_URL } from "../config/config";
-
+import { ToastContainer, toast } from "react-toastify";
 import { Spotify } from "react-spotify-embed";
 
 const ProfilePage = () => {
@@ -12,6 +12,7 @@ const ProfilePage = () => {
   const [profileUser, setProfileUser] = useState(null);
   const [userPost, setUserPost] = useState([]);
   const [SpotifyLink, setSpotifyLink] = useState("");
+  const wave = () => toast("Great job ! ");
 
   useEffect(() => {
     axios
@@ -79,11 +80,16 @@ const ProfilePage = () => {
         <form onSubmit={handleSpotify} className="spotifylink">
           <label>
             Paste in your Spotify favorite list here !
-            <input type="text" name="spotify"></input>
-            <button>Submit</button>
+            <input
+              type="text"
+              name="spotify"
+              placeholder="Paste here your link"
+            ></input>
+            <button onClick={wave}>Submit</button>
           </label>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

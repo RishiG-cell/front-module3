@@ -2,12 +2,14 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../config/config";
+import { ToastContainer, toast } from "react-toastify";
 
 const Signupform = () => {
   const [username, SetUsername] = useState("");
   const [email, SetEmail] = useState("");
   const [password, SetPassword] = useState("");
   const [country, SetCountry] = useState("");
+  const notify = () => toast("Welcome to please login!");
 
   const nav = useNavigate();
 
@@ -74,8 +76,9 @@ const Signupform = () => {
           <input type="file" name="image" />
         </label>
 
-        <button>Signup</button>
+        <button onClick={notify}>Signup</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

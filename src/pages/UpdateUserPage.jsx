@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { API_URL } from "../config/config";
-
+import { ToastContainer, toast } from "react-toastify";
 import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,7 @@ const UpdateUserPage = () => {
   const [country, SetCountry] = useState("");
   const [image, SetImage] = useState("");
   const nav = useNavigate();
+  const notify = () => toast("All Done !");
 
   useEffect(() => {
     axios
@@ -92,8 +93,9 @@ const UpdateUserPage = () => {
             <input type="file" name="image" />
           </label>
 
-          <button>Update</button>
+          <button onClick={notify}>Update</button>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );

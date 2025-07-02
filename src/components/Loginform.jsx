@@ -3,12 +3,14 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { API_URL } from "../config/config";
+import { ToastContainer, toast } from "react-toastify";
 
 const Loginform = () => {
   const [username, SetUsername] = useState("");
   const [password, SetPassword] = useState("");
   const { authenticateUser } = useContext(AuthContext);
   const nav = useNavigate();
+  const notify = () => toast("Welcome back!");
 
   async function handleLogin(e) {
     e.preventDefault();
@@ -43,8 +45,9 @@ const Loginform = () => {
             onChange={(e) => SetPassword(e.target.value)}
           />
         </label>
-        <button>Login</button>
+        <button onClick={notify}>Login</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
