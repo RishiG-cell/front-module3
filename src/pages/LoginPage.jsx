@@ -1,11 +1,7 @@
 import Loginform from "../components/Loginform";
 
 const LoginPage = () => {
-  return (
-    <>
-      <Loginform />
-    </>
-  );
+  return <Loginform />;
 };
 
 export default LoginPage;
