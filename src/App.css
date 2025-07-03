@@ -384,6 +384,17 @@ textarea {
 .box {
   margin-top: 50px;
 }
+@media screen and (max-width: 1200px) {
+  .feed-post {
+    display: none;
+  }
+  .feed-container {
+    width: 80%;
+  }
+  .feed-card {
+    margin: 5px;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .profilepage {
