@@ -25,6 +25,7 @@ const UpdateUserPage = () => {
         SetUsername(res.data.username);
         SetEmail(res.data.email);
         SetCountry(res.data.country);
+        SetPassword(res.data.password);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -45,7 +46,6 @@ const UpdateUserPage = () => {
     axios
       .put(`${API_URL}/profile/update/${currentUser._id}`, formData)
       .then((res) => {
-        console.log(res);
         nav("/profile");
       })
       .catch((err) => console.log(err));

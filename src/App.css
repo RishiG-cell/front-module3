@@ -384,3 +384,104 @@ textarea {
 .box {
   margin-top: 50px;
 }
+
+@media screen and (max-width: 500px) {
+  .profilepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profilepage img {
+    width: 90vw;
+  }
+
+  nav img {
+    width: 40%;
+  }
+
+  nav a {
+    font-size: 15px;
+    margin: 10px;
+  }
+  nav button {
+    margin: 5px;
+    font-size: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+  .sidebar a {
+    font-size: 12px;
+    margin-left: 40px;
+  }
+  .sidebar {
+    display: block;
+
+    width: 90vw;
+  }
+
+  .info-page {
+    width: 100vw;
+  }
+
+  .spotify-link-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spotify-link-box button {
+    width: 100px;
+    margin: 10px;
+  }
+
+  .feedpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .feed-post {
+    display: none;
+  }
+  .feedpage .sidebar {
+    display: none;
+  }
+  .feed-container .feed-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feed-container {
+    margin: 10px 20px;
+    width: auto;
+  }
+  .feed-card {
+    width: 100vw;
+  }
+  .feed-card button {
+    width: 100px;
+  }
+
+  .updatePage form input,
+  button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .home .flip1 .flip2 .flip3 .innerflip {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-card,
+  .login-card {
+    width: 80%;
+  }
+}
