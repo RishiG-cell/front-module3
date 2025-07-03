@@ -35,6 +35,7 @@ const UpdateUserPage = () => {
   function handleUpdate(e) {
     e.preventDefault();
 
+    const image = e.target.image.files[0];
     const formData = new FormData();
     formData.append("username", username);
     formData.append("email", email);
